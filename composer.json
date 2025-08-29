@@ -1,58 +1,32 @@
 {
-    "name": "ueberdosis/hocuspocus-laravel",
-    "description": "Integrates Hocuspocus into Laravel with a few clicks",
-    "keywords": [
-        "laravel",
-        "hocuspocus"
-    ],
-    "homepage": "https://github.com/ueberdosis/hocuspocus-laravel",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Hans Pagel",
-            "email": "humans@tiptap.dev",
-            "role": "Developer"
-        },
-        {
-            "name": "Kris Siepert",
-            "email": "m@kris.cool",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/contracts": "^8.0|^9.0",
-        "spatie/laravel-package-tools": "^1.4.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "Hocuspocus\\": "src",
-            "Hocuspocus\\Database\\Factories\\": "database/factories"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Hocuspocus\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "psalm": "vendor/bin/psalm",
-        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hocuspocus\\HocuspocusServiceProvider"
-            ],
-            "aliases": {
-                "Hocuspocus": "Hocuspocus\\HocuspocusFacade"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "empellio/hocuspocus-laravel",
+  "description": "Integrates Hocuspocus into Laravel (modernized fork)",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1|^8.2|^8.3|^8.4",
+    "illuminate/contracts": "^10.0|^11.0|^12.0",
+    "spatie/laravel-package-tools": "^1.90"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+    "phpunit/phpunit": "^10.5 || ^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hocuspocus\\": "src",
+      "Hocuspocus\\Database\\Factories\\": "database/factories"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Hocuspocus\\HocuspocusServiceProvider"
+      ],
+      "aliases": {
+        "Hocuspocus": "Hocuspocus\\HocuspocusFacade"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
